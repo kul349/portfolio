@@ -16,7 +16,6 @@ import {
 } from "lucide-react";
 
 const App = () => {
-  const [darkMode, setDarkMode] = useState(true);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -27,33 +26,38 @@ const App = () => {
 
   const projects = [
     {
-      title: "Physio-assessment web",
-      desc: "",
-      tags: ["System Design", "Redis", "Next.js", "Docker"],
+      title: "VendorHub",
+      desc: "A centralized Vendor Management System (VMS) designed to streamline the lifecycle of supplier relationships. Features include vendor onboarding, profile management, performance tracking, and secure communication channels between businesses and their providers.",
+      tags: ["AJAX", "EJS", "MySql"],
       link: "#",
-      github: "#",
+      github: "https://github.com/kul349/vendorHub",
     },
     {
-      title: "AI Semantic Search Engine",
-      desc: "Implemented vector embeddings to allow natural language searching across large document datasets.",
-      tags: ["Python", "FastAPI", "Vector DB", "React"],
-      link: "#",
-      github: "#",
+      title: "Physiotherapy Assessment Tests Guide | PhysioTest",
+      desc: "Understand physiotherapy assessment tests with patient-friendly guides, videos, and step-by-step explanations.",
+      tags: ["Google Analytics", "Google search console", "JSON", "Next js"],
+      link: "https://physioassessment.vercel.app/",
+      github: "https://github.com/kul349/physioassessment",
     },
     {
-      title: "IoT Health Monitor",
-      desc: "Real-time vitals tracking system with a Next.js dashboard and Arduino-based hardware integration.",
-      tags: ["Embedded C++", "WebSockets", "Next.js"],
-      link: "#",
-      github: "#",
+      title: "Backend Server",
+      desc: "A robust and scalable backend server built with [Node.js/Express. This project provides a secure API architecture, handling user authentication, database management, and seamless integration with frontend services.",
+      tags: ["MONGODB", "RESTAPI", "Node js"],
+      link: "https://backendserver-jivo.onrender.com",
+      github: "https://github.com/kul349/BackendServer",
     },
   ];
 
   const skills = {
-    Languages: ["TypeScript", "Python", "C++", "SQL", "Go"],
-    Frameworks: ["Next.js", "React", "Node.js", "Django", "Tailwind"],
-    Tools: ["Docker", "AWS", "Git", "PostgreSQL", "Redis"],
-    Engineering: ["System Design", "CI/CD", "Unit Testing", "API Design"],
+    Languages: ["JavaScript", "Python", "MongoDB", "SQL", "Flutter"],
+    Frameworks: ["Next.js", "React", "Node.js", "Tailwind"],
+    Tools: ["MongoDB", "Git", "GraphQL", "Redis"],
+    Engineering: [
+      "Database Normalization",
+      "Scalable System Design",
+      "RESTful API Architecture",
+      "Performance Optimization",
+    ],
   };
 
   return (
