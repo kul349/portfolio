@@ -2,17 +2,30 @@
 import React, { useState, useEffect } from "react";
 import {
   Github,
-  Linkedin,
-  Mail,
   ExternalLink,
-  Code2,
+  Database,
+  Server,
   Cpu,
+  ArrowRight,
+  Code,
   Layers,
+  ShieldCheck,
+  Cloud,
+  Mail,
+  Linkedin,
+  Twitter,
   Terminal,
-  ChevronRight,
-  Download,
- 
-  CircleSmall
+  Activity,
+  Workflow,
+  Box,
+  Globe,
+  Zap,
+  Lock,
+  Layout,
+  Smartphone,
+  Sparkles,
+  MousePointer2,
+  Divide,
 } from "lucide-react";
 
 const App = () => {
@@ -26,248 +39,238 @@ const App = () => {
 
   const projects = [
     {
-      title: "VendorHub",
-      desc: "A centralized Vendor Management System (VMS) designed to streamline the lifecycle of supplier relationships. Features include vendor onboarding, profile management, performance tracking, and secure communication channels between businesses and their providers.",
-      tags: ["Ajax", "EJS", "MySql","Bootstrap","Chart.js"],
-      link: "#",
-      github: "https://github.com/kul349/vendorHub",
+      title: "BackendServer v2",
+      description:
+        "A modern backend infrastructure utilizing Node.js and MongoDB. Designed for high performance and reliability, featuring RESTful API endpoints, JWT-based authentication, and automated middleware processing",
+      tags: ["Express js", "Node js", "MongoDb"],
+      icon: <Server className="w-5 h-5 text-blue-500" />,
+      stats: "Full-Stack Ops",
+      color: "border-indigo-100 bg-indigo-50/30",
     },
     {
-      title: "Physiotherapy Assessment Tests Guide | PhysioTest",
-      desc: "Understand physiotherapy assessment tests with patient-friendly guides, videos, and step-by-step explanations.",
-      tags: ["Google Analytics", "Google search console", "JSON", "Next js"],
-      link: "https://physioassessment.vercel.app/",
-      github: "https://github.com/kul349/physioassessment",
+      title: "VendorHub Enterprise",
+      description:
+        "A centralized Vendor Management System (VMS) designed to streamline the lifecycle of supplier relationships. Features include vendor onboarding, profile management, performance tracking, and secure communication channels between businesses and their providers.",
+      tags: ["Ajax", "EJS", "Bootstrap"],
+      icon: <Smartphone className="w-5 h-5 text-emerald-500" />,
+      stats: "98 Lighthouse",
+      color: "border-emerald-100 bg-emerald-50/30",
     },
     {
-      title: "Backend Server",
-      desc: "A robust and scalable backend server built with [Node.js/Express. This project provides a secure API architecture, handling user authentication, database management, and seamless integration with frontend services.",
-      tags: ["MONGODB", "RESTAPI", "Node js"],
-      link: "https://backendserver-jivo.onrender.com",
-      github: "https://github.com/kul349/BackendServer",
+      title: "Physio Test",
+      description:
+        "Learn the step-by-step stages of standardized physiotherapy assessments. This guide helps students and professionals understand each stage, from initial ...",
+      tags: ["Next js", "Tailwindcss", "JSON"],
+      icon: <Lock className="w-5 h-5 text-amber-500" />,
+      stats: "Low Latency UI",
+      color: "border-rose-100 bg-rose-50/30",
+    },
+    {
+      title: "doctorappointmenapp",
+      description:
+        "This is a web-based application designed to streamline the process of scheduling and managing medical appointments. It serves as a digital bridge between patients and healthcare providers, reducing the need for manual booking and physical queues.",
+      tags: ["Dart", "firebase", "Node js"],
+      icon: <Activity className="w-5 h-5 text-rose-500" />,
+      stats: "Security First",
+      color: "border-amber-100 bg-amber-50/30",
     },
   ];
 
-  const skills = {
-    Languages: ["JavaScript", "Python", "MongoDB", "SQL", "Flutter"],
-    Frameworks: ["Next.js", "React", "Node.js", "Tailwind"],
-    Tools: ["MongoDB", "Git", "GraphQL", "Redis"],
-    Engineering: [
-      "Database Normalization",
-      "Scalable System Design",
-      "RESTful API Architecture",
-      "Performance Optimization",
-    ],
-  };
+  const fullstackSkills = [
+    {
+      category: "Frontend",
+      tools: ["React", "Next.js", "Tailwind", "Framer Motion", "Three.js"],
+      icon: <Layout className="w-4 h-4" />,
+    },
+    {
+      category: "Backend",
+      tools: ["Node.js", "Express js", "SQL", "Redis", "GraphQL"],
+      icon: <Server className="w-4 h-4" />,
+    },
+    {
+      category: "DevOps",
+      tools: ["git",  "Vercel"],
+      icon: <Cloud className="w-4 h-4" />,
+    },
+  ];
 
   return (
-    <div className="bg-black opacity-90 text-white">
-      <div className="min-h-screen font-sans selection:bg-black transition-colors duration-300">
-        {/* Navigation */}
-        <nav
-          className={`fixed w-full z-50 transition-all duration-300 ${
-            scrolled
-              ? "bg-slate-950/80 backdrop-blur-md border-b border-slate-800 py-4"
-              : "bg-transparent py-6"
-          }`}
-        >
-          <div className=" mx-0 px-6 flex justify-between items-center ">
-            <div className="border-gray-700 outline  outline-gray-700 shadow-lg rounded-2xl px-2 py-4  transition-shadow duration-300 flex items-center justify-between">
-              <a href="">
-                <span className="text-base tracking-wider">
-                  karkikulbahadur344@gmail.com
-                </span>
-              </a>
-              <CircleSmall className="size-4 fill-green-500 text-green-500 animate-pulse" />
+    <div className="min-h-screen bg-[#FAFAFA] text-[#171717] font-sans selection:bg-indigo-600 selection:text-white scroll-smooth">
+      <style>
+        {`
+       .bento-grid{
+       display:grid;
+       grid-template-columns: repeat(12, 1fr);
+       gap:1rem;
+      }
+      @media (max-width: 1024px) {
+        .bento-grid { display: flex; flex-direction: column; }
+      }
+       `}
+      </style>
+      <nav
+        className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+          scrolled
+            ? "bg-white-800/50 backdrop-blur-xl border-b border-neutral-200 py-3"
+            : "bg-transparent py-6"
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="w-9 h-9 bg-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-200">
+              <Code className="w-5 h-5 text-white" />
             </div>
-            <div className="flex items-center gap-8">
-              <div className="hidden md:flex gap-6 text-sm font-medium opacity-80">
-                <a
-                  href="www.linkedin.com/in/kul-karki-2998b3282"
-                  className="hover:bg-gray-600  rounded transition-colors"
-                >
-                  <Linkedin className=" size-5" />
-                </a>
-                <a href="https://github.com/kul349/">
-                  <Github className="size-5" />
-                </a>
-              </div>
-            </div>
+            <span className="font-bold text-lg tracking-tight">
+              KUL<span className="text-neutral-400">.FULLSTACK</span>
+            </span>
           </div>
-        </nav>
-
-        {/* Hero Section */}
-        <section className="relative pt-32 pb-20 px-6 overflow-hidden">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-white text-xs font-bold mb-6">
-              <Terminal size={14} />{" "}
-              <span className="uppercase text-xl">kul bahadur karki</span>
-            </div>
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight">
-              Building <span className="text-white italic">scalable</span>{" "}
-              solutions for complex problems.
-            </h1>
-            <p className="text-lg md:text-xl opacity-60 max-w-2xl mx-auto mb-10 leading-relaxed">
-              Recent Computer Engineering graduate specialized in Full-stack
-              Architecture and System Performance. I turn complex requirements
-              into clean, maintainable code.
+          <div className="hidden md:flex items-center gap-8 text-[12px] font-semibold uppercase tracking-widest text-neutral-500">
+            <a href="#project" className="hover:text-black transition-colors">
+              Projects
+            </a>
+            <a href="#stack" className="hover:text-black transition-colors">
+              Stack
+            </a>
+            <a
+              href="#contact"
+              className="bg-black text-white px-5 py-2 rounded-full hover:bg-neutral-800 transition-all"
+            >
+              Hire Me
+            </a>
+          </div>
+        </div>
+      </nav>
+      <main className="max-w-7xl mx-auto px-6 pt-32 lg:pt-48 pb-24">
+        <section className="mb-32">
+          <div className="flex items-center gap-2 mb-8">
+            <span className="px-3 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-600 text-[12px] font-black tracking-widest uppercase">
+              Fullstack Product Engineer
+            </span>
+            <span className="text-[10px] font-bold text-neutral-400">
+              Available for 2026 Q3 Roles
+            </span>
+          </div>
+          <h1 className="text-6xl md:text-[7.5rem] font-black tracking-tighter mb-10 leading-[0.85] uppercase">
+            From Pixels <br />
+            <span className="text-neutral-400 text-6xl md:text-[6.5rem]">
+              to Production.
+            </span>
+          </h1>
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-10">
+            <p className="text-xl md:text-2xl text-neutral-500 max-w-2xl leading-snug">
+              I bridge the gap between{" "}
+              <span className="text-black font-semibold">
+                elegant user interfaces
+              </span>
+              {""}
+              and {""}
+              <span className="text-black font-semibold">
+                robust system logic
+              </span>
+              . Building digital products that are fast, accessible, and
+              scalable.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="relative overflow-hidden px-6 py-4 border border-white text-white transition-colors duration-300 group ">
-                <span className="relative z-10 group-hover:text-black  ">
-                  VIEW PROJECTS
-                </span>
-                <span className="absolute inset-0 bg-white transform scale-x-0 origin-right transition-transform duration-300 group-hover:scale-x-100" />
-              </button>
-              <button className="relative overflow-hidden px-6 py-4 border border-white text-white transition-colors duration-300 group">
-                <span className="relative z-10 group-hover:text-black">
-                  DOWNLOAD RESUME
-                </span>
-
-                <span className="absolute inset-0 bg-white transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100" />
-              </button>
+            <div className="flex gap-4">
+              <a
+                href="#projects"
+                className="h-16 px-10 bg-black text-white rounded-2xl font-bold flex items-center gap-3 hover:bg-indigo-600 transition-all group  "
+              >
+                Recent Work{" "}
+                <MousePointer2 className="w-4 h-4 group-hover:translate-y-1 group-hover:translate-x-1 transition-transform" />
+              </a>
             </div>
           </div>
         </section>
-
-        {/* Skills Section */}
-        <section id="skills" className="py-20 px-6 bg-slate-900/50">
-          <div className="max-w-6xl mx-auto">
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold mb-2">Technical Proficiency</h2>
-              <div className="h-1 w-20 bg-blue-500 rounded-full" />
+        <div className="bento-grid">
+          <div className="col-span-7 bg-white border border-neutral-200 rounded-[2.5rem] p-10 flex-col justify-between hover:border-indigo-400 transition-colors group">
+            <div>
+              <div className="flex items-center gap-3 mb-8 ">
+                <Sparkles className="w-5 h-5 text-indigo-500" />
+                <span className="text-xs font-bold text-neutral-400 uppercase tracking-widest">
+                  Interface & UX
+                </span>
+              </div>
+              <h2 className="text-4xl font-bold tracking-tight mb-6">
+                User-centric frontend engineering.
+              </h2>
+              <p className="text-neutral-500 leading-relaxed max-w-md">
+                I build immersive experiences using modern frameworks like{" "}
+                <span className="text-black font-medium">Next.js</span> and{" "}
+                <span className="text-black font-medium">Tailwind</span>. My
+                work focuses on performance, smooth animations, and bulletproof
+                responsive design.
+              </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {Object.entries(skills).map(([category, items]) => (
-                <div
-                  key={category}
-                  className="p-6 rounded-2xl bg-slate-800/50 border border-slate-700/50 hover:border-blue-500/50 transition-colors group"
-                >
-                  <h3 className="text-blue-400 font-bold mb-4 flex items-center gap-2">
-                    {category === "Languages" && <Code2 size={18} />}
-                    {category === "Frameworks" && <Layers size={18} />}
-                    {category === "Tools" && <Terminal size={18} />}
-                    {category === "Engineering" && <Cpu size={18} />}
-                    {category}
-                  </h3>
-                  <div className="flex flex-wrap gap-2">
-                    {items.map((item) => (
-                      <span
-                        key={item}
-                        className="px-3 py-1 bg-slate-900 rounded-md text-sm opacity-80 group-hover:opacity-100 transition-opacity"
-                      >
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Projects Grid */}
-        <section id="projects" className="py-20 px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="flex justify-between items-end mb-12">
+            <div className="mt-12 flex gap-12 border-t border-neutral-100 pt-8">
               <div>
-                <h2 className="text-3xl font-bold mb-2">Featured Projects</h2>
-                <div className="h-1 w-20 bg-emerald-500 rounded-full" />
+                <div className="text-2xl font-black">+98</div>
+                <div className="text-[10px] font-bold text-neutral-400 uppercase">
+                  Avg Lighthouse Score
+                </div>
               </div>
-              <a
-                href="https://github.com/kul349/"
-                className="text-sm text-blue-400 hover:underline flex items-center gap-1"
-              >
-                View all on GitHub <ExternalLink size={14} />
-              </a>
+              <div>
+                <div className="text-2xl font-black">100%</div>
+                <div className="text-[10px] font-bold text-neutral-400 uppercase">
+                  A11y Compliance
+                </div>
+              </div>
             </div>
+          </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {projects.map((project, i) => (
-                <div
-                  key={i}
-                  className="group relative rounded-2xl bg-slate-900 border border-slate-800 overflow-hidden flex flex-col hover:-translate-y-2 transition-transform"
-                >
-                  <div className="h-48 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center p-8">
-                    <div className="w-full h-full border-2 border-dashed border-slate-700 rounded-lg flex items-center justify-center opacity-40">
-                      <Layers size={48} className="text-slate-500" />
-                    </div>
-                  </div>
-                  <div className="p-6 flex-1 flex flex-col">
-                    <h3 className="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">
-                      {project.title}
-                    </h3>
-                    <p className="text-sm opacity-60 mb-6 flex-1">
-                      {project.desc}
-                    </p>
-                    <div className="flex flex-wrap gap-2 mb-6">
-                      {project.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="text-[10px] uppercase tracking-widest font-bold text-blue-400 bg-blue-500/5 px-2 py-1 rounded"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    <div className="flex gap-4">
-                      <a
-                        href={project.github}
-                        className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 transition-colors"
-                      >
-                        <Github size={20} />
-                      </a>
-                      <a
-                        href={project.link}
-                        className="flex-1 text-center py-2 bg-blue-600 rounded-lg text-sm font-semibold hover:bg-blue-700 transition-colors"
-                      >
-                        Live Demo
-                      </a>
-                    </div>
-                  </div>
+          <div className="col-span-5 bg-neutral-900 rounded-[2.5rem] p-10  text-white flex flex-col justify-between overflow-hidden group">
+            <div className="relative z-10">
+              <div className="flex items-center gap-3 mb-8">
+                <Zap className="w-5 h-5 text-amber-400" />
+                <span className="text-xs font-bold text-neutral-500 tracking-widest uppercase">
+                  Logic & Scale
+                </span>
+              </div>
+              <h2 className="text-3xl font-bold tracking-tight mb-6">
+                Robust backend orchestration.
+              </h2>
+              <p className="text-neutral-400 text-sm leading-relaxed">
+                Expertise in building distributed APIs, real-time database
+                synchronization, and secure cloud environments that handle
+                millions of requests.
+              </p>
+            </div>
+            <div className="relative z-10 space-y-4">
+              <div className="flex items-center gap-4 p-4  bg-white/5 rounded-2xl border border-white/10">
+                <Database className="w-5 h-5 text-indigo-400" />
+                <span className="text-xs font-mono">
+                  PostgreSQL / Redis / Prisma
+                </span>
+              </div>
+              <div className="flex items-center gap-4 p-4 bg-white/5 rounded-2xl border border-white/10">
+                <Server className="w-5 h-5 text-emerald-400" />
+                <span className="text-xs font-mono">
+                  AWS / Docker / Kubernetes
+                </span>
+              </div>
+            </div>
+            <div className="absolute -bottom-10 -right-10 opacity-5 group-hover:opacity-10 transition-opacity">
+              <Terminal className="w-64 h-64" />
+            </div>
+          </div>
+          {/* Projects Gallery */}
+
+          <div id="projects" className="col-span-12 mt-4">
+            <div className="flex items-center gap-4 mb-8">
+              <span className="text-2xl font-bold tracking-tighter px-2 uppercase">
+                End-to-End Projects
+              </span>
+              <div className="h-px flex-1 bg-neutral-200"></div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {projects.map((p,i)=>(
+                <div key={i} className={`p-8 rounded-[2.5rem] border transition-all duration-500 group hover:shadow-2xl hover:shadow-neutral-200/50 hover:-translate-y-1 ${p.color}`}>
+
                 </div>
               ))}
             </div>
           </div>
-        </section>
-
-        {/* Contact / Footer */}
-        <footer className="py-20 border-t border-slate-800 bg-slate-950 px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-6">
-              Interested in working together?
-            </h2>
-            <p className="opacity-60 mb-10">
-              I am currently looking for full-time opportunities as a Software
-              or Systems Engineer.
-            </p>
-            <div className="flex justify-center gap-6 mb-12">
-              <a
-                href="karkikulbahadur344@gmail.com"
-                className="p-4 rounded-full bg-slate-900 hover:bg-blue-600 transition-all hover:scale-110 border border-slate-800"
-              >
-                <Mail size={24} />
-              </a>
-              <a
-                href="https://github.com/kul349/"
-                className="p-4 rounded-full bg-slate-900 hover:bg-blue-600 transition-all hover:scale-110 border border-slate-800"
-              >
-                <Github size={24} />
-              </a>
-              <a
-                href="www.linkedin.com/in/kul-karki-2998b3282"
-                className="p-4 rounded-full bg-slate-900 hover:bg-blue-600 transition-all hover:scale-110 border border-slate-800"
-              >
-                <Linkedin size={24} />
-              </a>
-            </div>
-            <p className="text-xs opacity-40">
-              © 2026 Built with Next.js, Tailwind CSS and passion for
-              engineering.
-            </p>
-          </div>
-        </footer>
-      </div>
+        </div>
+      </main>
     </div>
   );
 };
