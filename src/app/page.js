@@ -83,12 +83,12 @@ const App = () => {
             <div className="flex items-center gap-8">
               <div className="hidden md:flex gap-6 text-sm font-medium opacity-80">
                 <a
-                  href="#projects"
+                  href="www.linkedin.com/in/kul-karki-2998b3282"
                   className="hover:bg-gray-600  rounded transition-colors"
                 >
                   <Linkedin className=" size-5" />
                 </a>
-                <a href="#skills">
+                <a href="https://github.com/kul349/">
                   <Github className="size-5" />
                 </a>
               </div>
@@ -114,9 +114,10 @@ const App = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <button className="relative overflow-hidden px-6 py-4 border border-white text-white transition-colors duration-300 group ">
-                
-                <span className="relative z-10 group-hover:text-black  ">VIEW PROJECTS</span>
-                <span className="absolute inset-0 bg-white transform scale-x-0 origin-right transition-transform duration-300 group-hover:scale-x-100"/>
+                <span className="relative z-10 group-hover:text-black  ">
+                  VIEW PROJECTS
+                </span>
+                <span className="absolute inset-0 bg-white transform scale-x-0 origin-right transition-transform duration-300 group-hover:scale-x-100" />
               </button>
               <button className="relative overflow-hidden px-6 py-4 border border-white text-white transition-colors duration-300 group">
                 <span className="relative z-10 group-hover:text-black">
@@ -174,7 +175,7 @@ const App = () => {
                 <div className="h-1 w-20 bg-emerald-500 rounded-full" />
               </div>
               <a
-                href="#"
+                href="https://github.com/kul349/"
                 className="text-sm text-blue-400 hover:underline flex items-center gap-1"
               >
                 View all on GitHub <ExternalLink size={14} />
