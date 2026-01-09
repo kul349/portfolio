@@ -28,7 +28,7 @@ const App = () => {
     {
       title: "VendorHub",
       desc: "A centralized Vendor Management System (VMS) designed to streamline the lifecycle of supplier relationships. Features include vendor onboarding, profile management, performance tracking, and secure communication channels between businesses and their providers.",
-      tags: ["AJAX", "EJS", "MySql"],
+      tags: ["Ajax", "EJS", "MySql","Bootstrap","Chart.js"],
       link: "#",
       github: "https://github.com/kul349/vendorHub",
     },
