@@ -243,19 +243,19 @@ const App = () => {
             </p>
             <div className="flex justify-center gap-6 mb-12">
               <a
-                href="mailto:email@example.com"
+                href="karkikulbahadur344@gmail.com"
                 className="p-4 rounded-full bg-slate-900 hover:bg-blue-600 transition-all hover:scale-110 border border-slate-800"
               >
                 <Mail size={24} />
               </a>
               <a
-                href="#"
+                href="https://github.com/kul349/"
                 className="p-4 rounded-full bg-slate-900 hover:bg-blue-600 transition-all hover:scale-110 border border-slate-800"
               >
                 <Github size={24} />
               </a>
               <a
-                href="#"
+                href="www.linkedin.com/in/kul-karki-2998b3282"
                 className="p-4 rounded-full bg-slate-900 hover:bg-blue-600 transition-all hover:scale-110 border border-slate-800"
               >
                 <Linkedin size={24} />
