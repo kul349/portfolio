@@ -262,9 +262,45 @@ const App = () => {
               <div className="h-px flex-1 bg-neutral-200"></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {projects.map((p,i)=>(
-                <div key={i} className={`p-8 rounded-[2.5rem] border transition-all duration-500 group hover:shadow-2xl hover:shadow-neutral-200/50 hover:-translate-y-1 ${p.color}`}>
-
+              {projects.map((p, i) => (
+                <div
+                  key={i}
+                  className={`p-8 rounded-[2.5rem] border transition-all duration-500 group hover:shadow-2xl hover:shadow-neutral-200/50 hover:-translate-y-1 ${p.color}`}
+                >
+                  <div className="flex items-center justify-center mb-8">
+                    <div className="p-3 bg-white rounded-2xl shadow-sm border border-neutral-100 group-hover:scale-110 transition-transform ">
+                      {p.icon}
+                    </div>
+                    <ArrowRight className="w-4 h-4 text-neutral-300 group-hover:text-black group-hover:translate-x-1 transition-all" />
+                  </div>
+                  <h3 className="text-lg font-bold mb-2 tracking-tight group-hover:text-indigo-600 transition-colors ">
+                    {p.title}
+                  </h3>
+                  <p className="text-xs text-neutral-500 leading-relaxed mb-8">
+                    {p.description}
+                  </p>
+                  <div className="flex flex-col gap-4">
+                    <div className="flex flex-wrap gap-4">
+                      {p.tags.map((t) => (
+                        <span
+                          key={t}
+                          className="text-[9px] font-black text-neutral-400  uppercase tracking-tighter"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="flex justify-between items-center border-t border-neutral-200/50 pt-4 ">
+                      <span className="text-[10px] font-black text-neutral-900 uppercase">
+                        {p.stats}
+                      </span>
+                      <div className="flex gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+                        <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 opacity-30"></div>
+                        <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 opacity-10"></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
