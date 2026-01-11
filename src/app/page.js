@@ -135,7 +135,7 @@ const App = () => {
             </span>
           </div>
           <div className="hidden md:flex items-center gap-8 text-[12px] font-semibold uppercase tracking-widest text-neutral-500">
-            <a href="#project" className="hover:text-black transition-colors">
+            <a href="#projects" className="hover:text-black transition-colors">
               Projects
             </a>
             <a href="#stack" className="hover:text-black transition-colors">
@@ -362,11 +362,11 @@ const App = () => {
           >
             <div className="relative z-10">
               <h3 className="text-4xl font-black tracking-tighter mb-4 uppercase">
-                Let's Build <br /> The Future.
+                Let&apos;s Build <br /> The Future.
               </h3>
               <p className="text-indigo-100 text-sm leading-relaxed mb-8 opacity-80">
                 Whether you need a full-scale platform or a high-performance web
-                app, I'm ready to ship.
+                app, I&apos;m ready to ship.
               </p>
             </div>
             <div className="relative z-10 space-y-3">
@@ -426,10 +426,16 @@ const App = () => {
               studio to your users.
             </p>
             <div className="flex gap-6 text-[10px] font-black uppercase tracking-widest text-neutral-400">
-              <a href="#" className="hover:text-indigo-600 transition-colors">
+              <a
+                href="https://github.com/kul349"
+                className="hover:text-indigo-600 transition-colors"
+              >
                 GitHub
               </a>
-              <a href="#" className="hover:text-indigo-600 transition-colors">
+              <a
+                href="www.linkedin.com/in/kul-karki-2998b3282"
+                className="hover:text-indigo-600 transition-colors"
+              >
                 LinkedIn
               </a>
               <a href="#" className="hover:text-indigo-600 transition-colors">
