@@ -228,14 +228,19 @@ function Homepage() {
           </span>
           <nav className="flex sm:gap-2 space-x-2 px-2 text-white uppercase tracking-wider sm:text-xs md:text-base">
             <Link href="/">Home</Link>
-            <Link href="/aboutme">About Me</Link>
-            <Link href="/project">Project</Link>
-            <Link href="/skill">Skills</Link>
+            <Link href="#aboutme">About Me</Link>
+            <Link href="#project">Project</Link>
+            <Link href="#skill">Skills</Link>
+            <Link href="#contact">Contact</Link>
+            <Link href="#experience">Experience</Link>
           </nav>
         </div>
       </header>
       {/* Hero Section */}
-      <section id="home" className="min-h-screen  max-w-7xl w-full flex flex-col-reverse md:flex-row items-center justify-around px-4">
+      <section
+        id="home"
+        className="min-h-screen  max-w-7xl w-full flex flex-col-reverse md:flex-row items-center justify-around px-4"
+      >
         {/* Text */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left mt-8 md:mt-0 max-w-3xl">
           <h1 className="text-3xl md:text-4xl font-semibold">
@@ -284,7 +289,10 @@ function Homepage() {
           />
         </motion.div>
       </section>
-      <section  id="aboutme" className="flex flex-col items-center px-4 md:px-0 py-12">
+      <section
+        id="aboutme"
+        className="flex flex-col items-center px-4 md:px-0 py-12"
+      >
         <div className="flex items-center justify-center gap-4 mb-10">
           <div className="h-1 w-20 bg-yellow-600" />
 
@@ -357,7 +365,7 @@ function Homepage() {
           </motion.div>
         </div>
       </section>
-      <section className="flex flex-col max-w-7xl w-full mx-auto items-center justify-center px-4 md:px-6 py-12 space-y-8 bg-gray-50 rounded-2xl dark:bg-gray-900">
+      <section id="skill" className="flex flex-col max-w-7xl w-full mx-auto items-center justify-center px-4 md:px-6 py-12 space-y-8 bg-gray-50 rounded-2xl dark:bg-gray-900">
         <div className="flex items-center justify-center gap-4 mb-10">
           <div className="h-1 w-20 bg-yellow-600" />
           <motion.h1 className="text-2xl md:text-3xl font-semibold">
@@ -397,7 +405,10 @@ function Homepage() {
           })}
         </div>
       </section>
-      <section id="project" className="w-full max-w-7xl mx-auto px-4 py-16 space-y-10">
+      <section
+        id="project"
+        className="w-full max-w-7xl mx-auto px-4 py-16 space-y-10"
+      >
         {/* Heading */}
         <div className="flex items-center justify-center gap-4">
           <div className="h-1 w-20 bg-yellow-600" />
@@ -476,7 +487,10 @@ function Homepage() {
           ))}
         </div>
       </section>{" "}
-      <section id className="w-full max-w-7xl mx-auto px-4 py-16 space-y-12">
+      <section
+        id="experience"
+        className="w-full max-w-7xl mx-auto px-4 py-16 space-y-12"
+      >
         {/* Heading */}
         <div className="flex items-center justify-center gap-4">
           <div className="h-1 w-20 bg-yellow-600" />
@@ -531,7 +545,10 @@ function Homepage() {
           ))}
         </motion.div>
       </section>
-      <section id="contact" className="w-full max-w-7xl mx-auto px-4 py-16 space-y-12">
+      <section
+        id="contact"
+        className="w-full max-w-7xl mx-auto px-4 py-16 space-y-12"
+      >
         {/* Heading */}
         <div className="flex items-center justify-center gap-4">
           <div className="h-1 w-20 bg-yellow-600" />
