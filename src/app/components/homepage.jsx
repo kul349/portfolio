@@ -1,6 +1,8 @@
 "use client"
 import React from "react";
+import { useState } from "react";
 import Link from "next/link";
+import { HiMenu, HiX } from "react-icons/hi";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
@@ -238,24 +240,76 @@ const contacts = [
     icon: <Globe className="w-5 h-5 text-yellow-500" />,
   },
 ];
+const [menuOpen, setMenuOpen] = useState(false);
+
+const toggleMenu = () => setMenuOpen(!menuOpen);
   return (
     <main>
       {/* Header */}
-      <header className="flex flex-col bg-yellow-500">
-        <div className="flex justify-between items-center p-4">
-          <span className="font-bold uppercase text-white">
-            Kul Bahadur Karki
-          </span>
-          <nav className="flex sm:gap-2 space-x-2 px-2 text-white uppercase tracking-wider sm:text-xs md:text-base">
-            <Link href="/">Home</Link>
-            <Link href="#aboutme">About Me</Link>
-            <Link href="#project">Project</Link>
-            <Link href="#skill">Skills</Link>
-            <Link href="#contact">Contact</Link>
-            <Link href="#experience">Experience</Link>
-          </nav>
-        </div>
-      </header>
+      <header className="w-full bg-yellow-500 fixed top-0 z-50 shadow-md">
+  <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center p-4">
+    {/* Logo */}
+    <span className="font-bold uppercase text-white text-lg md:text-xl">
+      Kul Bahadur Karki
+    </span>
+
+    {/* Desktop Nav */}
+    <nav className="hidden md:flex flex-wrap items-center gap-2 md:gap-4 text-white uppercase tracking-wider text-sm md:text-base">
+      <Link href="/">Home</Link>
+      <Link href="#aboutme">About Me</Link>
+      <Link href="#project">Projects</Link>
+      <Link href="#skill">Skills</Link>
+      <Link href="#contact">Contact</Link>
+      <Link href="#experience">Experience</Link>
+      <a
+        href="mailto:karkikulbahadur344@gmail.com"
+        className="ml-2 md:ml-4 px-3 py-1 bg-black text-white font-semibold rounded-2xl transition whitespace-nowrap"
+      >
+        Hire Me
+      </a>
+    </nav>
+
+    {/* Mobile Menu Button */}
+    <div className="md:hidden flex items-center">
+      <button
+        onClick={toggleMenu}
+        className="text-white text-2xl focus:outline-none"
+      >
+        {menuOpen ? <HiX /> : <HiMenu />}
+      </button>
+    </div>
+  </div>
+
+  {/* Mobile Menu */}
+  {menuOpen && (
+    <div className="md:hidden bg-yellow-500 text-white uppercase text-center py-4 space-y-2 shadow-lg w-full overflow-hidden">
+      <Link href="/" onClick={toggleMenu} className="block">
+        Home
+      </Link>
+      <Link href="#aboutme" onClick={toggleMenu} className="block">
+        About Me
+      </Link>
+      <Link href="#project" onClick={toggleMenu} className="block">
+        Projects
+      </Link>
+      <Link href="#skill" onClick={toggleMenu} className="block">
+        Skills
+      </Link>
+      <Link href="#contact" onClick={toggleMenu} className="block">
+        Contact
+      </Link>
+      <Link href="#experience" onClick={toggleMenu} className="block">
+        Experience
+      </Link>
+      <a
+        href="mailto:karkikulbahadur344@gmail.com"
+        className="block mt-2 px-4 py-2 bg-white text-yellow-500 font-semibold rounded hover:bg-yellow-100 transition"
+      >
+        Hire Me
+      </a>
+    </div>
+  )}
+</header>
       {/* Hero Section */}
       <section
         id="home"
