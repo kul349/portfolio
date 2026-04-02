@@ -3,7 +3,8 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Linkedin,Instagram,Github, icons } from "lucide-react";
+import { Typewriter } from "react-simple-typewriter";
+import { Mail, Phone, MapPin, Linkedin, Globe ,Instagram,Github, icons } from "lucide-react";
 import { FaNodeJs, FaReact, FaHtml5, FaCss3Alt, FaJs } from "react-icons/fa";
 import {
   SiMongodb,
@@ -39,6 +40,19 @@ function Homepage() {
         "Organized and optimized unstructured data in MySQL databases.",
         "Developed a dashboard to analyze marketing data using MongoDB.",
         "Deployed a live production website for the organization.",
+      ],
+    },
+    {
+      role: "Freelance Full Stack Developer",
+      company: "Elevator Company (Client Project)",
+      duration: "2025 - Present",
+      location: "Remote / Nepal",
+      points: [
+        "Developed a modern marketing website for an elevator services company using Next.js and Tailwind CSS",
+        "Built scalable backend APIs using Node.js, Express, and MongoDB",
+        "Integrated GraphQL for efficient data fetching and optimized performance",
+        "Designed responsive UI for better user engagement and mobile compatibility",
+        "Collaborated directly with client to gather requirements and deliver customized solutions",
       ],
     },
   ];
@@ -192,32 +206,38 @@ function Homepage() {
         icon: <Instagram/>,
       },
     ];
-    const contacts = [
-      {
-        label: "Email",
-        value: "karkikulbahadur344@gmail.com",
-        link: "mailto:karkikulbahadur344@gmail.com",
-      },
-      {
-        label: "Phone",
-        value: "+977 9824715648",
-        link: "tel:+9779824715648",
-      },
-      {
-        label: "Location",
-        value: "Kathmandu, Nepal",
-      },
-      {
-        label: "LinkedIn",
-        value: "linkedin.com/in/kul-karki-2998b3282",
-        link: "https://www.linkedin.com/in/kul-karki-2998b3282",
-      },
-      {
-        label: "Portfolio",
-        value: "portfolio-kul-bahadur-karki.vercel.app",
-        link: "https://portfolio-kul-bahadur-karki.vercel.app",
-      },
-    ];
+    
+const contacts = [
+  {
+    label: "Email",
+    value: "karkikulbahadur344@gmail.com",
+    link: "mailto:karkikulbahadur344@gmail.com",
+    icon: <Mail className="w-5 h-5 text-yellow-500" />,
+  },
+  {
+    label: "Phone",
+    value: "+977 9824715648",
+    link: "tel:+9779824715648",
+    icon: <Phone className="w-5 h-5 text-yellow-500" />,
+  },
+  {
+    label: "Location",
+    value: "Kathmandu, Nepal",
+    icon: <MapPin className="w-5 h-5 text-yellow-500" />,
+  },
+  {
+    label: "LinkedIn",
+    value: "linkedin.com/in/kul-karki-2998b3282",
+    link: "https://www.linkedin.com/in/kul-karki-2998b3282",
+    icon: <Linkedin className="w-5 h-5 text-yellow-500" />,
+  },
+  {
+    label: "Portfolio",
+    value: "portfolio-kul-bahadur-karki.vercel.app",
+    link: "https://portfolio-kul-bahadur-karki.vercel.app",
+    icon: <Globe className="w-5 h-5 text-yellow-500" />,
+  },
+];
   return (
     <main>
       {/* Header */}
@@ -246,9 +266,20 @@ function Homepage() {
           <h1 className="text-3xl md:text-4xl font-semibold">
             Hi, I&apos;m Kul Bahadur Karki
           </h1>
-          <p className="mt-4 text-xl md:text-4xl font-bold text-yellow-500 ">
-            I design and develop elegant, minimal websites for modern and
-            functional products.
+          <p className="mt-4 text-xl md:text-4xl font-bold text-yellow-500">
+            <Typewriter
+              words={[
+                "I design modern websites.",
+                "I build scalable web applications.",
+                "I create elegant and fast user experiences.",
+              ]}
+              loop={true}
+              cursor
+              cursorStyle="|"
+              typeSpeed={70}
+              deleteSpeed={40}
+              delaySpeed={1500}
+            />
           </p>
           <p className="pt-4">
             I design and develop unique websites that are elegant, fast, and
@@ -365,44 +396,49 @@ function Homepage() {
           </motion.div>
         </div>
       </section>
-      <section id="skill" className="flex flex-col max-w-7xl w-full mx-auto items-center justify-center px-4 md:px-6 py-12 space-y-8 bg-gray-50 rounded-2xl dark:bg-gray-900">
-        <div className="flex items-center justify-center gap-4 mb-10">
-          <div className="h-1 w-20 bg-yellow-600" />
-          <motion.h1 className="text-2xl md:text-3xl font-semibold">
-            Skills
-          </motion.h1>
-          <div className="h-1 w-20 bg-yellow-600" />
-        </div>
+      <section
+        id="skill"
+        className="flex flex-col  items-center justify-center px-4 md:px-6 py-12 space-y-8 bg-gray-50 rounded-2xl dark:bg-gray-900"
+      >
+        <div className="max-w-7xl w-full mx-auto">
+          <div className="flex items-center justify-center gap-4 mb-10">
+            <div className="h-1 w-20 bg-yellow-600" />
+            <motion.h1 className="text-2xl md:text-3xl font-semibold">
+              Skills
+            </motion.h1>
+            <div className="h-1 w-20 bg-yellow-600" />
+          </div>
 
-        <p className="mb-8 text-gray-700 text-center">
-          I am a passionate full-stack developer with hands-on experience in
-          building scalable web applications. My expertise lies in Node.js,
-          Next.js, and React.js, where I design clean and maintainable code. I
-          enjoy working with databases like MongoDB and MySQL and crafting
-          responsive frontend interfaces using Tailwind CSS, Bootstrap, HTML,
-          CSS, and JavaScript.
-        </p>
+          <p className="mb-8 text-gray-700 text-center">
+            I am a passionate full-stack developer with hands-on experience in
+            building scalable web applications. My expertise lies in Node.js,
+            Next.js, and React.js, where I design clean and maintainable code. I
+            enjoy working with databases like MongoDB and MySQL and crafting
+            responsive frontend interfaces using Tailwind CSS, Bootstrap, HTML,
+            CSS, and JavaScript.
+          </p>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
-          {skills.map((skill, index) => {
-            const Icon = skill.icon;
-            return (
-              <motion.div
-                key={index}
-                className="flex flex-col items-center gap-2 p-2 rounded-xl shadow"
-                animate={{ y: [0, -10, 0] }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  repeatType: "loop",
-                  delay: index * 0.1,
-                }}
-              >
-                <Icon className={`text-7xl md:text-8xl ${skill.color}`} />
-                <p className="text-sm font-medium">{skill.name}</p>
-              </motion.div>
-            );
-          })}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
+            {skills.map((skill, index) => {
+              const Icon = skill.icon;
+              return (
+                <motion.div
+                  key={index}
+                  className="flex flex-col items-center gap-2 p-2 rounded-xl shadow"
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    delay: index * 0.1,
+                  }}
+                >
+                  <Icon className={`text-7xl md:text-8xl ${skill.color}`} />
+                  <p className="text-sm font-medium">{skill.name}</p>
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
       </section>
       <section
@@ -487,116 +523,131 @@ function Homepage() {
           ))}
         </div>
       </section>{" "}
-      <section
-        id="experience"
-        className="w-full max-w-7xl mx-auto px-4 py-16 space-y-12"
-      >
-        {/* Heading */}
-        <div className="flex items-center justify-center gap-4">
-          <div className="h-1 w-20 bg-yellow-600" />
-          <h1 className="text-2xl md:text-3xl font-semibold">Experience</h1>
-          <div className="h-1 w-20 bg-yellow-600" />
-        </div>
+      <section id="experience" className="bg-gray-200 px-4 py-16">
+        <div className="max-w-7xl mx-auto w-full">
+          {/* Heading */}
+          <div className="flex items-center justify-center gap-4 mb-12">
+            <div className="h-1 w-20 bg-yellow-600" />
+            <h1 className="text-2xl md:text-3xl font-semibold text-black">
+              Experience
+            </h1>
+            <div className="h-1 w-20 bg-yellow-600" />
+          </div>
 
-        {/* Timeline */}
-        <motion.div
-          className="relative border-l-2 border-yellow-400 pl-6 space-y-12"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={{
-            hidden: {},
-            visible: {
-              transition: {
-                staggerChildren: 0.3,
+          {/* Cards Grid */}
+          <motion.div
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 "
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{
+              hidden: {},
+              visible: {
+                transition: {
+                  staggerChildren: 0.2,
+                },
               },
-            },
-          }}
-        >
-          {experiences.map((exp, index) => (
-            <motion.div
-              key={index}
-              className="relative"
-              variants={{
-                hidden: { opacity: 0, x: -50 },
-                visible: { opacity: 1, x: 0 },
-              }}
-              transition={{ duration: 0.5 }}
-            >
-              {/* Dot */}
-              <div className="absolute -left-[10px] top-2 w-4 h-4 bg-yellow-500 rounded-full"></div>
+            }}
+          >
+            {experiences.map((exp, index) => (
+              <motion.div
+                key={index}
+                className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl hover:-translate-y-3 transition duration-300"
+                variants={{
+                  hidden: { opacity: 0, y: 50 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+              >
+                {/* Role */}
+                <h3 className="text-lg font-semibold text-gray-800">
+                  {exp.role}
+                </h3>
 
-              {/* Card */}
-              <div className="bg-white shadow-md rounded-xl p-5 hover:shadow-xl hover:-translate-y-2 transition">
-                <h3 className="text-lg font-semibold">{exp.role}</h3>
-                <p className="text-yellow-600 font-medium">{exp.company}</p>
+                {/* Company */}
+                <p className="text-yellow-600 font-medium mt-1">
+                  {exp.company}
+                </p>
 
-                <p className="text-sm text-gray-500">
+                {/* Duration */}
+                <p className="text-sm text-gray-500 mt-1">
                   {exp.duration} • {exp.location}
                 </p>
 
-                <ul className="mt-3 list-disc list-inside text-sm text-gray-600 space-y-1">
+                {/* Divider */}
+                <div className="w-10 h-1 bg-green-600 mt-3 mb-4 rounded" />
+
+                {/* Points */}
+                <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
                   {exp.points.map((point, i) => (
                     <li key={i}>{point}</li>
                   ))}
                 </ul>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-      </section>
-      <section
-        id="contact"
-        className="w-full max-w-7xl mx-auto px-4 py-16 space-y-12"
-      >
-        {/* Heading */}
-        <div className="flex items-center justify-center gap-4">
-          <div className="h-1 w-20 bg-yellow-600" />
-          <h1 className="text-2xl md:text-3xl font-semibold">Contact</h1>
-          <div className="h-1 w-20 bg-yellow-600" />
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
+      </section>
+      <section id="contact" className="px-4 py-16 space-y-12 ">
+        <div className="w-full max-w-7xl mx-auto ">
+          {/* Heading */}
+          <div className="flex items-center justify-center gap-4">
+            <div className="h-1 w-20 bg-yellow-600" />
+            <h1 className="text-2xl md:text-3xl font-semibold mb-4">Contact</h1>
+            <div className="h-1 w-20 bg-yellow-600" />
+          </div>
 
-        {/* Content */}
-        <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={{
-            hidden: {},
-            visible: {
-              transition: {
-                staggerChildren: 0.2,
-              },
-            },
-          }}
-        >
-          {contacts.map((item, index) => (
+          {/* Content */}
+          <div className="mt-10 ">
             <motion.div
-              key={index}
-              className="p-5 rounded-xl bg-white shadow-md hover:shadow-xl transition hover:-translate-y-2"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
               variants={{
-                hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0 },
+                hidden: {},
+                visible: {
+                  transition: {
+                    staggerChildren: 0.2,
+                  },
+                },
               }}
             >
-              <p className="text-sm text-gray-500">{item.label}</p>
-
-              {item.link ? (
-                <a
-                  href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-yellow-600 font-medium break-all hover:underline"
+              {contacts.map((item, index) => (
+                <motion.div
+                  key={index}
+                  className="p-5 rounded-xl bg-white shadow-md hover:shadow-xl transition hover:-translate-y-2 flex items-start gap-4"
+                  variants={{
+                    hidden: { opacity: 0, y: 30 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
                 >
-                  {item.value}
-                </a>
-              ) : (
-                <p className="font-medium">{item.value}</p>
-              )}
+                  {/* Icon */}
+                  <div className="bg-yellow-100 p-3 rounded-lg">
+                    {item.icon}
+                  </div>
+
+                  {/* Text */}
+                  <div className="flex flex-col">
+                    <p className="text-sm text-gray-500">{item.label}</p>
+
+                    {item.link ? (
+                      <a
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-yellow-600 font-medium break-all hover:underline"
+                      >
+                        {item.value}
+                      </a>
+                    ) : (
+                      <p className="font-medium">{item.value}</p>
+                    )}
+                  </div>
+                </motion.div>
+              ))}
             </motion.div>
-          ))}
-        </motion.div>
+          </div>
+        </div>
       </section>
     </main>
   );
